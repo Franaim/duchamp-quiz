@@ -49,7 +49,7 @@ body {
 
 }
 
-#start-button {
+#start-button, slide2-nextButton {
     background-color: black;
     color: #ffffff;
     font-weight: 400;
