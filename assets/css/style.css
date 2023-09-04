@@ -10,4 +10,28 @@
 
 body {
     font-family: "Inter", sans-serif;
+
+}
+
+#quiz-container {
+    background-color: #d2e5e9;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading {
+    margin: 20px;
+}
+
+.game-area {
+    background-color: white;
+    opacity: 90%;
+    border-radius: 10px;
+    width: 80%;
+    padding: 20px;
+}
+#options {
+    list-style: none;
 }
