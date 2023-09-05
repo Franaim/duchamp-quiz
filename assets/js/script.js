@@ -30,36 +30,37 @@ let counterDiv = document.getElementById("score-area");
 
 let playButton = document.getElementById("play-button")
 playButton.addEventListener("click", slide1);
-startButton.addEventListener("click", showCounter);
+playButton.addEventListener("click", showCounter);
 }
 
 //DOM functions
+
 
 // Slide from username section to first question of the quiz
 
 function slide1() {
     body.innerHTML =
     `
-     <div class="question-area">
-    <p id="question1">What nearly led Marcel Duchamp to give up his art career?</p>
-    <div id="options-area">
-        <button class="option" id="false1">Losing his eyesight due to a health condition</button>
-        <button class="option" id="false2">Writing novels</button>
-        <button class="option" id="true">Professional Chess</li>
-</div>
+    <div id="first-question-container">
+      <div id="question-area">
+        <p id="question1">What nearly led Marcel Duchamp to give up his art career?</p>
+      </div>
+      <div id="options-area">
+          <button class="option" id="false1">Losing his eyesight due to a health condition</button>
+          <button class="option" id="false2">Writing novels</button>
+          <button class="option" id="true">Professional Chess</button>
+      </div>
 
-    <!-- This should show the right answer after the user has selected an option -->
-<div id="solution-text" style="visibility:hidden">
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quisquam cum enim deserunt laboriosam rerum esse hic? Nobis animi, eveniet ex repellendus aperiam officia! Esse nostrum ipsum error totam amet.
-    </p>
-    <button id="next">Next</button>
-</div>
-
-<div id="score-area">
-    <p class="scores">Correct Answers: <span id="correct">${countTrue}</span></p>
-    <p class="scores">Incorrect Answers: <span id="incorrect">${countFalse}</span></p>
-</div>
+      <!-- This should show the right answer after the user has selected an option -->
+      <div id="solution-text" style="visibility:hidden">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quisquam cum enim deserunt laboriosam rerum esse hic? Nobis animi, eveniet ex repellendus aperiam officia! Esse nostrum ipsum error totam amet.</p>
+      </div>
+      <button id="next">Next</button>
+      <div id="score-area">
+        <p class="scores">Correct Answers: <span id="correct">${countTrue}</span></p>
+        <p class="scores">Incorrect Answers: <span id="incorrect">${countFalse}</span></p>
+      </div>
+    </div>
     `;
 
     let trueAnswer = document.getElementById("true");
@@ -76,10 +77,12 @@ function slide1() {
     falseAnswer1.addEventListener("click", changeColor);
     falseAnswer2.addEventListener("click", wrongAnswered);
     falseAnswer2.addEventListener("click", changeColor);
+    nextButton.addEventListener("click", slide2);
 }
 
+
+
 function changeColor() {
-    //Since both slide1 and changeColor are in the same outer block (the global scope), variables declared in slide1 are accessible in changeColor without redeclaration
     trueAnswer.style.backgroundColor = "green";
     falseAnswer1.style.backgroundColor = "red";
     falseAnswer2.style.backgroundColor = "red";
@@ -90,4 +93,35 @@ function changeColor() {
     trueAnswer.disabled = true;
     falseAnswer1.disabled = true;
     falseAnswer2.disabled = true;
+}
+
+function showCounter() {
+  counterDiv.innerHTML = `
+    <div class="score-area">
+    <p class="scores">Correct Answers: <span id="correct">${countTrue}</span></p>
+    <p class="scores">Incorrect Answers: <span id="incorrect">${countFalse}</span></p>
+</div>
+`;
+}
+
+function slide2() {
+    body.innerHTML =
+    `
+    <div id="second-question-container">
+      <div id="question-area">
+        <p id="question1">What pseudonym did Marcel Duchamp use when writing art criticism?</p>
+      </div>
+      <div id="options-area">
+          <button class="option" id="false1">Richard Mutt</button>
+          <button class="option" id="true">Rrose Sélavy</button>
+          <button class="option" id="false2">Francis Picabia</button>
+      </div>
+
+      <!-- This should show the right answer after the user has selected an option -->
+      <div id="solution-text" style="visibility:hidden">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quisquam cum enim deserunt laboriosam rerum esse hic? Nobis animi, eveniet ex repellendus aperiam officia! Esse nostrum ipsum error totam amet.</p>
+      </div>
+      <button id="next">Next</button>
+    </div>
+    `;
 }
