@@ -129,6 +129,8 @@ function wrongAnswered() {
 }
 
 function updateCounter() {
-  sumar.innerHTML = countTrue;
-  restar.innerHTML = countFalse;
+  let correct = document.getElementById("correct");
+  let incorrect = document.getElementById("incorrect");
+  correct.innerHTML = countTrue;
+  incorrect.innerHTML = countFalse;
 }
