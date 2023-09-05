@@ -70,14 +70,24 @@ function slide1() {
 
     //Event listeners for each answer
 
-    trueAnswer.addEventListener("click", correctlyAnswered); //This function should increase the Correct Answers counter
-    trueAnswer.addEventListener("click", changeColor); //This should change the background color if each option after selecting one
-    trueAnswer.addEventListener("click", showSolution); //This should make the explanation visible
-    falseAnswer1.addEventListener("click", wrongAnswered); //Opposed to the first function here, this increase the Wrong Answers counter
+    trueAnswer.addEventListener("click", correctlyAnswered); //This function will increase the Correct Answers counter
+    trueAnswer.addEventListener("click", changeColor); //This will change the background color if each option after selecting one
+    falseAnswer1.addEventListener("click", wrongAnswered); //Opposed to the first function here, this will the Wrong Answers counter
     falseAnswer1.addEventListener("click", changeColor);
-    falseAnswer1.addEventListener("click", showSolution);
     falseAnswer2.addEventListener("click", wrongAnswered);
     falseAnswer2.addEventListener("click", changeColor);
-    falseAnswer2.addEventListener("click", showSolution);
 }
 
+function changeColor() {
+    //Since both slide1 and changeColor are in the same outer block (the global scope), variables declared in slide1 are accessible in changeColor without redeclaration
+    trueAnswer.style.backgroundColor = "green";
+    falseAnswer1.style.backgroundColor = "red";
+    falseAnswer2.style.backgroundColor = "red";
+    nextButton.style.visibility = "visible"; //this should make the Next Question button visible only after selecting an answer
+    solution.style.visibility = "visible"; //This will make the explanation visible only after selecting an answer
+    
+    //These should make the clickable answers disabled after having cliked one
+    trueAnswer.disabled = true;
+    falseAnswer1.disabled = true;
+    falseAnswer2.disabled = true;
+}
