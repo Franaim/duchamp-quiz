@@ -7,13 +7,16 @@ let startButton = document.getElementById("start-button")
 let countTrue = 0;
 let countFalse = 0;
 
+
 //Event listeners
 startButton.addEventListener("click", slide0);
-startButton.addEventListener("click", showCounter);
+
+
 
 //Slide from introduction to username section
 
 function slide0() {
+    
     body.innerHTML =
     `
      <p class="question-area">Choose a nickname</p>
@@ -24,17 +27,15 @@ function slide0() {
         <button id="play-button">Play</button>
     `;
 let userName = document.getElementById("username");
-let counterDiv = document.getElementById("score-area");
+let playButton = document.getElementById("play-button")
 
 //Event listeners for next slide function
 
-let playButton = document.getElementById("play-button")
+
 playButton.addEventListener("click", slide1);
-playButton.addEventListener("click", showCounter);
 }
 
 //DOM functions
-
 
 // Slide from username section to first question of the quiz
 
@@ -48,7 +49,7 @@ function slide1() {
       <div id="options-area">
           <button class="option" id="false1">Losing his eyesight due to a health condition</button>
           <button class="option" id="false2">Writing novels</button>
-          <button class="option" id="true">Professional Chess</button>
+          <button class="option" id="true0">Professional Chess</button>
       </div>
 
       <!-- This should show the right answer after the user has selected an option -->
@@ -63,7 +64,7 @@ function slide1() {
     </div>
     `;
 
-    let trueAnswer = document.getElementById("true");
+    let trueAnswer = document.getElementById("true0");
     let falseAnswer1 = document.getElementById("false1");
     let falseAnswer2 = document.getElementById("false2");
     let solution = document.getElementById("solution-text");
@@ -72,15 +73,13 @@ function slide1() {
     //Event listeners for each answer
 
     trueAnswer.addEventListener("click", correctlyAnswered); //This function will increase the Correct Answers counter
-    trueAnswer.addEventListener("click", changeColor); //This will change the background color if each option after selecting one
+    trueAnswer.addEventListener("click", changeColor); //This will change the background color of each option after selecting one
     falseAnswer1.addEventListener("click", wrongAnswered); //Opposed to the first function here, this will the Wrong Answers counter
     falseAnswer1.addEventListener("click", changeColor);
     falseAnswer2.addEventListener("click", wrongAnswered);
     falseAnswer2.addEventListener("click", changeColor);
     nextButton.addEventListener("click", slide2);
 }
-
-
 
 function changeColor() {
     trueAnswer.style.backgroundColor = "green";
@@ -95,14 +94,6 @@ function changeColor() {
     falseAnswer2.disabled = true;
 }
 
-function showCounter() {
-  counterDiv.innerHTML = `
-    <div class="score-area">
-    <p class="scores">Correct Answers: <span id="correct">${countTrue}</span></p>
-    <p class="scores">Incorrect Answers: <span id="incorrect">${countFalse}</span></p>
-</div>
-`;
-}
 
 function slide2() {
     body.innerHTML =
@@ -124,4 +115,20 @@ function slide2() {
       <button id="next">Next</button>
     </div>
     `;
+}
+
+//Counter functions
+function correctlyAnswered() {
+  countTrue++;
+  updateCounter();
+}
+
+function wrongAnswered() {
+  countFalse++;
+  updateCounter();
+}
+
+function updateCounter() {
+  sumar.innerHTML = countTrue;
+  restar.innerHTML = countFalse;
 }
