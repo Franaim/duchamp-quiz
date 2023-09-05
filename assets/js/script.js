@@ -56,7 +56,7 @@ function slide1() {
       <div id="solution-text" style="visibility:hidden">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quisquam cum enim deserunt laboriosam rerum esse hic? Nobis animi, eveniet ex repellendus aperiam officia! Esse nostrum ipsum error totam amet.</p>
       </div>
-      <button id="next">Next</button>
+      <button id="next" style= "visibility:hidden">Next</button>
       <div id="score-area">
         <p class="scores">Correct Answers: <span id="correct">${countTrue}</span></p>
         <p class="scores">Incorrect Answers: <span id="incorrect">${countFalse}</span></p>
@@ -82,6 +82,11 @@ function slide1() {
 }
 
 function changeColor() {
+    let trueAnswer = document.getElementById("true0");
+    let falseAnswer1 = document.getElementById("false1");
+    let falseAnswer2 = document.getElementById("false2");
+    let solution = document.getElementById("solution-text");
+    let nextButton = document.getElementById("next");
     trueAnswer.style.backgroundColor = "green";
     falseAnswer1.style.backgroundColor = "red";
     falseAnswer2.style.backgroundColor = "red";
