@@ -1,17 +1,16 @@
 //html elements
-let body = document.getElementById("introduction-area")
-let startButton = document.getElementById("start-button")
+let body = document.getElementById("introduction-area");
+let startButton = document.getElementById("start-button");
+const userName = document.getElementById("username");
 
 //Set the counter to 0
 
 let countTrue = 0;
 let countFalse = 0;
 
-
 //Event listeners
+
 startButton.addEventListener("click", slide0);
-
-
 
 //Slide from introduction to username section
 
@@ -19,20 +18,16 @@ function slide0() {
     
     body.innerHTML =
     `
-     <p class="question-area">Choose a nickname</p>
-        <form>
-          <label for="username">Player:</label><br />
-          <input type="text" id="username" name="username" required />
-        </form>
-        <button id="play-button">Play</button>
+    <label for="username">Choose a nickname:</label><br/>
+    <input type="text" id="username" name="username" placeholder="Enter nickname" required/>
+    <button id="play-button" name="play">Play</button>
     `;
-let userName = document.getElementById("username");
-let playButton = document.getElementById("play-button")
 
-//Event listeners for next slide function
+    let playButton = document.getElementById("play-button");
 
+    //Event listeners for next slide function
 
-playButton.addEventListener("click", slide1);
+    playButton.addEventListener("click", slide1);
 }
 
 //DOM functions
@@ -217,6 +212,7 @@ function perfectScore() {
     </p>
     <button onclick="window.location.reload()">Play again</button>
     `;
+    let userName = document.getElementById("username");
 }
 
 function goodScore() {
@@ -230,6 +226,7 @@ function goodScore() {
     </p>
     <button onclick="window.location.reload()">Play again</button>
     `;
+    
 }
 
 function badScore() {
