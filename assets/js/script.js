@@ -121,8 +121,13 @@ function slide2() {
         <p>Duchamp occasionally wrote art criticism under a pseudonym. One of his pseudonyms was "Rrose Sélavy" (pronounced "eros, c'est la vie"), a play on the phrase "Eros, c'est la vie" meaning "Love, that's life." Under this pseudonym, Duchamp authored several humorous and satirical articles about art, further blurring the lines between his art and his commentary on art.</p>
       </div>
       <button id="next">Next</button>
+      <div id="score-area">
+        <p class="scores">Correct Answers: <span id="correct">${countTrue}</span></p>
+        <p class="scores">Incorrect Answers: <span id="incorrect">${countFalse}</span></p>
+      </div>
     </div>
     `;
+
     let trueAnswer = document.getElementById("true0");
     let falseAnswer1 = document.getElementById("false1");
     let falseAnswer2 = document.getElementById("false2");
@@ -139,9 +144,9 @@ function slide2() {
     falseAnswer2.addEventListener("click", changeColor);
     nextButton.addEventListener("click", slide3);
     //These will make the buttons clickable again
-    trueOption.disabled = false;
-    falseOption1.disabled = false;
-    falseOption2.disabled = false;
+    trueAnswer.disabled = false;
+    falseAnswer1.disabled = false;
+    falseAnswer2.disabled = false;
 }
 
 function slide3() {
@@ -163,8 +168,13 @@ function slide3() {
         <p>Marcel Duchamp's artistic humor knew no bounds. In 1921, he unveiled "Why Not Sneeze, Rose Sélavy?," a sculpture that encapsulated his whimsical approach. This piece featured a birdcage housing a cube of sugar cubes and a small thermometer, and the very title, "Why Not Sneeze, Rose Sélavy?," exemplified the delightful absurdity at the heart of his work. In 1964, Duchamp continued to tickle the art world's funny bone with "In Advance of the Broken Arm," a sculpture that turned a standard snow shovel into a work of art. The title playfully suggested that the shovel was ahead of its time, humorously commenting on the unconventional nature of art.</p>
       </div>
       <button id="finish">Finish</button>
+      <div id="score-area">
+        <p class="scores">Correct Answers: <span id="correct">${countTrue}</span></p>
+        <p class="scores">Incorrect Answers: <span id="incorrect">${countFalse}</span></p>
+      </div>
     </div>
     `;
+    
     let trueAnswer = document.getElementById("true0");
     let falseAnswer1 = document.getElementById("false1");
     let falseAnswer2 = document.getElementById("false2");
@@ -181,9 +191,9 @@ function slide3() {
     falseAnswer2.addEventListener("click", changeColor);
     finishButton.addEventListener("click", slideResult);
     //These will make the buttons clickable again
-    trueOption.disabled = false;
-    falseOption1.disabled = false;
-    falseOption2.disabled = false;
+    trueAnswer.disabled = false;
+    falseAnswer1.disabled = false;
+    falseAnswer2.disabled = false;
 }
 
 function slideResult() {
