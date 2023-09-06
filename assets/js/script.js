@@ -54,7 +54,9 @@ function slide1() {
 
       <!-- This should show the right answer after the user has selected an option -->
       <div id="solution-text" style="visibility:hidden">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quisquam cum enim deserunt laboriosam rerum esse hic? Nobis animi, eveniet ex repellendus aperiam officia! Esse nostrum ipsum error totam amet.</p>
+        <p id="answer-heading">Professional Chess</p><br>
+        <p>Duchamp had a deep passion for chess and even considered giving up art to become a professional chess player. He competed in several chess tournaments and achieved the title of "Master" in 1950. 
+One fun fact is his love for playing chess in unconventional places. Duchamp was known for carrying a pocket chess set with him wherever he went. He was so passionate about the game that he would challenge friends and even strangers to impromptu chess matches in cafes, art galleries, and even while riding on buses or trains.</p>
       </div>
       <button id="next" style= "visibility:hidden">Next</button>
       <div id="score-area">
@@ -105,21 +107,91 @@ function slide2() {
     `
     <div id="second-question-container">
       <div id="question-area">
-        <p id="question1">What pseudonym did Marcel Duchamp use when writing art criticism?</p>
+        <p id="question2">What pseudonym did Marcel Duchamp use when writing art criticism?</p>
       </div>
       <div id="options-area">
           <button class="option" id="false1">Richard Mutt</button>
-          <button class="option" id="true">Rrose Sélavy</button>
+          <button class="option" id="true0">Rrose Sélavy</button>
           <button class="option" id="false2">Francis Picabia</button>
       </div>
 
       <!-- This should show the right answer after the user has selected an option -->
       <div id="solution-text" style="visibility:hidden">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quisquam cum enim deserunt laboriosam rerum esse hic? Nobis animi, eveniet ex repellendus aperiam officia! Esse nostrum ipsum error totam amet.</p>
+        <p id="answer-heading">Rrose Sélavy</p><br>
+        <p>Duchamp occasionally wrote art criticism under a pseudonym. One of his pseudonyms was "Rrose Sélavy" (pronounced "eros, c'est la vie"), a play on the phrase "Eros, c'est la vie" meaning "Love, that's life." Under this pseudonym, Duchamp authored several humorous and satirical articles about art, further blurring the lines between his art and his commentary on art.</p>
       </div>
       <button id="next">Next</button>
     </div>
     `;
+    let trueAnswer = document.getElementById("true0");
+    let falseAnswer1 = document.getElementById("false1");
+    let falseAnswer2 = document.getElementById("false2");
+    let solution = document.getElementById("solution-text");
+    let nextButton = document.getElementById("next");
+
+    //Event listeners for each answer
+
+    trueAnswer.addEventListener("click", correctlyAnswered);
+    trueAnswer.addEventListener("click", changeColor);
+    falseAnswer1.addEventListener("click", wrongAnswered);
+    falseAnswer1.addEventListener("click", changeColor);
+    falseAnswer2.addEventListener("click", wrongAnswered);
+    falseAnswer2.addEventListener("click", changeColor);
+    nextButton.addEventListener("click", slide3);
+    //These will make the buttons clickable again
+    trueOption.disabled = false;
+    falseOption1.disabled = false;
+    falseOption2.disabled = false;
+}
+
+function slide3() {
+    body.innerHTML =
+    `
+    <div id="third-question-container">
+      <div id="question-area">
+        <p id="question3">Among the following options, which title does not correspond to a genuine work created by Marcel Duchamp?</p>
+      </div>
+      <div id="options-area">
+          <button class="option" id="false1">Why Not Sneeze, Rose Sélavy?</button>
+          <button class="option" id="false2">In Advance of the Broken Arm</button>
+          <button class="option" id="true0">The Bicycle Wheel</button>
+      </div>
+
+      <!-- This should show the right answer after the user has selected an option -->
+      <div id="solution-text" style="visibility:hidden">
+        <p id="answer-heading">The Bicycle Wheel</p><br>
+        <p>Marcel Duchamp's artistic humor knew no bounds. In 1921, he unveiled "Why Not Sneeze, Rose Sélavy?," a sculpture that encapsulated his whimsical approach. This piece featured a birdcage housing a cube of sugar cubes and a small thermometer, and the very title, "Why Not Sneeze, Rose Sélavy?," exemplified the delightful absurdity at the heart of his work. In 1964, Duchamp continued to tickle the art world's funny bone with "In Advance of the Broken Arm," a sculpture that turned a standard snow shovel into a work of art. The title playfully suggested that the shovel was ahead of its time, humorously commenting on the unconventional nature of art.</p>
+      </div>
+      <button id="finish">Finish</button>
+    </div>
+    `;
+    let trueAnswer = document.getElementById("true0");
+    let falseAnswer1 = document.getElementById("false1");
+    let falseAnswer2 = document.getElementById("false2");
+    let solution = document.getElementById("solution-text");
+    let finishButton = document.getElementById("finish");
+
+    //Event listeners for each answer
+
+    trueAnswer.addEventListener("click", correctlyAnswered);
+    trueAnswer.addEventListener("click", changeColor);
+    falseAnswer1.addEventListener("click", wrongAnswered);
+    falseAnswer1.addEventListener("click", changeColor);
+    falseAnswer2.addEventListener("click", wrongAnswered);
+    falseAnswer2.addEventListener("click", changeColor);
+    finishButton.addEventListener("click", slideResult);
+    //These will make the buttons clickable again
+    trueOption.disabled = false;
+    falseOption1.disabled = false;
+    falseOption2.disabled = false;
+}
+
+function slideResult() {
+    body.innerHTML =
+    `
+    <h1>Your score is</h1>
+    `;
+
 }
 
 //Counter functions
