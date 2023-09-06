@@ -174,7 +174,7 @@ function slide3() {
       </div>
     </div>
     `;
-    
+
     let trueAnswer = document.getElementById("true0");
     let falseAnswer1 = document.getElementById("false1");
     let falseAnswer2 = document.getElementById("false2");
@@ -197,11 +197,52 @@ function slide3() {
 }
 
 function slideResult() {
-    body.innerHTML =
-    `
-    <h1>Your score is</h1>
-    `;
+    if (countTrue === 3) {
+    perfectScore();
+  } else if (countTrue === 2 || countTrue === 1) {
+    goodScore();
+  } else {
+    badScore();
+  }
+}
 
+function perfectScore() {
+    body.innerHTML = `
+    <!-- For someone who answered all questions correctly: -->
+
+    <h2>Congratulations, ${userName}!</h2>
+    <p>Your score is ${countTrue}/3</p>
+    <p>
+      You're a Duchamp disciple! You've cracked the enigmatic code of Marcel Duchamp's art. You're a true avant-garde champion!
+    </p>
+    <button onclick="window.location.reload()">Play again</button>
+    `;
+}
+
+function goodScore() {
+    body.innerHTML = `
+    <!-- For someone who answered one or two questions correctly: -->
+
+    <h2>Not bad, ${userName}!</h2>
+    <p>Your score is ${countTrue}/3</p>
+    <p>
+      You've embraced Duchamp's spirit of experimentation. You made a few detours but found your way to some artistic revelations. Keep exploring!
+    </p>
+    <button onclick="window.location.reload()">Play again</button>
+    `;
+}
+
+function badScore() {
+    body.innerHTML = `
+    <!-- For someone who selected all the wrong answers: -->
+
+    <h2>Oops, ${userName}!</h2>
+    <p>Your score is ${countTrue}/3</p>
+    <p>
+      Looks like you took a surrealist journey of your own. Don't worry; even Duchamp had his off days. Time for a brush-up on Duchampian wisdom!
+    </p>
+    <button onclick="window.location.reload()">Play again</button>
+    `;
 }
 
 //Counter functions
