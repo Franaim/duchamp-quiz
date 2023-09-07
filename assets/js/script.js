@@ -267,7 +267,7 @@ function perfectScore() {
     <p class="text-centered">
       You're a Duchamp disciple! You've cracked the enigmatic code of Marcel Duchamp's art. You're a true avant-garde champion!
     </p>
-    <button onclick="window.location.reload()">Play again</button>
+    <button onclick="window.location.reload()" id="restart-button">Play again</button>
     `;
 }
 
@@ -280,7 +280,7 @@ function goodScore() {
     <p class="text-centered">
       You've embraced Duchamp's spirit of experimentation. You made a few detours but found your way to some artistic revelations. Keep exploring!
     </p>
-    <button onclick="window.location.reload()">Play again</button>
+    <button onclick="window.location.reload()" id="restart-button">Play again</button>
     `;
     
 }
@@ -291,23 +291,23 @@ function badScore() {
 
     <h2 class="text-centered feedback">Oops, ${userName}!</h2>
     <p>Your score is ${countTrue}/3</p>
-    <p>
+    <p class="text-centered">
       Looks like you took a surrealist journey of your own. Don't worry; even Duchamp had his off days. Time for a brush-up on Duchampian wisdom!
     </p>
-    <button onclick="window.location.reload()">Play again</button>
+    <button onclick="window.location.reload()" id="restart-button">Play again</button>
     `;
 }
 
 //Counter functions
 function correctlyAnswered() {
   countTrue++;
-  console.log (userName + " selected the right answer")
+  console.log(userName + " selected the right answer")
   updateCounter();
 }
 
 function wrongAnswered() {
   countFalse++;
-  console.log (userName + " selected a wrong answer")
+  console.log(userName + " selected a wrong answer")
   updateCounter();
 }
 

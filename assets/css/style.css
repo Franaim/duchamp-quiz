@@ -20,7 +20,7 @@
 
 #heading {
     margin: 20px;
-    font-family: font-family: 'Abril Fatface', cursive;
+    font-family: 'Abril Fatface', cursive;
     text-align: center;
 }
 
@@ -185,4 +185,41 @@ button {
 
 .feedback {
     text-align: center;
+}
+
+/* Media query: tablets and larger (768px and up) */
+
+h1 {
+    font-size: 50px;
+}
+
+#introduction-area {
+    min-height: 90vh;
+    justify-content: flex-start;
+    margin-top: 40px;
+}
+
+.question-container {
+    height: 70vh;
+    width: 70%;
+    margin-top: 20px;
+}
+
+.option {
+    height: 60px;
+    margin: 10px;
+}
+
+#start-button, #play-button, #next, #restart-button {
+    font-size: 16px;
+    padding: 8px 10px 8px 10px;
+}
+
+.text-centered {
+    max-width: 80%;
+}
+
+#score-area {
+    margin-bottom: 20px;
+    position: fixed;
 }
