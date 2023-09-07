@@ -33,7 +33,7 @@
 #introduction-area {
     display: flex;
     width: 100%;
-    height: max-content;
+    height: fit-content;
     align-items: center;
     justify-content: center;
     font-size: larger;
@@ -112,8 +112,6 @@ button {
     font-size: 15px;
 }
 
-
-
 #start-button {
     margin: 30px;
 }
@@ -133,6 +131,26 @@ button {
     width: 80%;
     padding: 20px;
 }
-#options {
-    list-style: none;
+/* Style for question section */
+
+#first-question-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: center;
+    height: min-content;
+}
+
+#question-area {
+    margin-bottom: 10px;
+}
+
+#options-area {
+    width: 100%;
+}
+.option {
+    width: 95%;
+    align-self: center;
+    text-align: left;
+
 }
