@@ -21,6 +21,11 @@ function slide0() {
       <input type="text" id="username" name="username" placeholder="Enter nickname" required maxlength="15"/>
       <button id="play-button" type="submit" name="play">Play</button>
     </form>
+    <img
+          src="assets/images/wheel-gray.jpg"
+          alt="Fragment of an image of 'Bicycle Wheel', one of Marcel Duchamp's ready-made."
+          id="wheel-img"
+        />
     `;
 
     userName = document.getElementById("username");
