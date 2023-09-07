@@ -116,8 +116,11 @@ function changeColor() {
     let falseAnswer2 = document.getElementById("false2");
     let solution = document.getElementById("solution-text");
     let nextButton = document.getElementById("next");
+    trueAnswer.style.color = "black";
     trueAnswer.style.backgroundColor = "#b4bc37";
+    falseAnswer1.style.color = "black";
     falseAnswer1.style.backgroundColor = "#828d9c";
+    falseAnswer2.style.color = "black";
     falseAnswer2.style.backgroundColor = "#828d9c";
     nextButton.style.visibility = "visible"; //this should make the Next Question button visible only after selecting an answer
     solution.style.display = "block"; //This will make the explanation visible only after selecting an answer
