@@ -33,7 +33,8 @@ function slide0() {
         if  (userName.value === "") {  
           alert ("Please enter a nickname")
         } else {
-          userName = userName.value;  
+          userName = userName.value;
+          console.log("Nickname entered: " + userName)
           slide1();
         }  
     }
