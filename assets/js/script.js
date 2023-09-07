@@ -60,7 +60,7 @@ function slide1() {
 
       <!-- This should show the right answer after the user has selected an option -->
       <div id="solution-text" style="visibility:hidden">
-        <p id="answer-heading">Professional Chess</p><br>
+        <p id="answer-heading"></p><br>
         <p>Duchamp had a deep passion for chess and even considered giving up art to become a professional chess player. He competed in several chess tournaments and achieved the title of "Master" in 1950. 
 One fun fact is his love for playing chess in unconventional places. Duchamp was known for carrying a pocket chess set with him wherever he went. He was so passionate about the game that he would challenge friends and even strangers to impromptu chess matches in cafes, art galleries, and even while riding on buses or trains.</p>
       </div>
@@ -75,19 +75,35 @@ One fun fact is his love for playing chess in unconventional places. Duchamp was
     let trueAnswer = document.getElementById("true0");
     let falseAnswer1 = document.getElementById("false1");
     let falseAnswer2 = document.getElementById("false2");
-    let solution = document.getElementById("solution-text");
     let nextButton = document.getElementById("next");
+    
 
     //Event listeners for each answer
 
     trueAnswer.addEventListener("click", correctlyAnswered); //This function will increase the Correct Answers counter
     trueAnswer.addEventListener("click", changeColor); //This will change the background color of each option after selecting one
+    trueAnswer.addEventListener("click", congrats1);
     falseAnswer1.addEventListener("click", wrongAnswered); //Opposed to the first function here, this will the Wrong Answers counter
     falseAnswer1.addEventListener("click", changeColor);
+    falseAnswer1.addEventListener("click", sorry1);
     falseAnswer2.addEventListener("click", wrongAnswered);
     falseAnswer2.addEventListener("click", changeColor);
+    falseAnswer2.addEventListener("click", sorry1);
     nextButton.addEventListener("click", slide2);
 }
+
+//For each answer type, a different message (slide1)
+
+function congrats1(){
+    let congratsMsg = document.getElementById("answer-heading");
+    congratsMsg.innerHTML = "That's right, professional chess.";
+}
+
+function sorry1(){
+    let congratsMsg = document.getElementById("answer-heading");
+    congratsMsg.innerHTML = "Believe it or not, it was professional chess.";
+}
+
 
 function changeColor() {
     let trueAnswer = document.getElementById("true0");
@@ -124,9 +140,9 @@ function slide2() {
       <!-- This should show the right answer after the user has selected an option -->
       <div id="solution-text" style="visibility:hidden">
         <p id="answer-heading">Rrose Sélavy</p><br>
-        <p>Duchamp occasionally wrote art criticism under a pseudonym. One of his pseudonyms was "Rrose Sélavy" (pronounced "eros, c'est la vie"), a play on the phrase "Eros, c'est la vie" meaning "Love, that's life." Under this pseudonym, Duchamp authored several humorous and satirical articles about art, further blurring the lines between his art and his commentary on art.</p>
+        <p>One of his pseudonyms was "Rrose Sélavy" (pronounced "eros, c'est la vie"), a play on the phrase "Eros, c'est la vie" meaning "Love, that's life." Under this pseudonym, Duchamp authored several humorous and satirical articles about art, further blurring the lines between his art and his commentary on art.</p>
       </div>
-      <button id="next">Next</button>
+      <button id="next" style= "visibility:hidden">Next</button>
       <div id="score-area">
         <p class="scores">Correct Answers: <span id="correct">${countTrue}</span></p>
         <p class="scores">Incorrect Answers: <span id="incorrect">${countFalse}</span></p>
@@ -137,22 +153,34 @@ function slide2() {
     let trueAnswer = document.getElementById("true0");
     let falseAnswer1 = document.getElementById("false1");
     let falseAnswer2 = document.getElementById("false2");
-    let solution = document.getElementById("solution-text");
     let nextButton = document.getElementById("next");
 
     //Event listeners for each answer
 
     trueAnswer.addEventListener("click", correctlyAnswered);
     trueAnswer.addEventListener("click", changeColor);
+    trueAnswer.addEventListener("click", congrats2);
     falseAnswer1.addEventListener("click", wrongAnswered);
     falseAnswer1.addEventListener("click", changeColor);
+    falseAnswer1.addEventListener("click", sorry2);
     falseAnswer2.addEventListener("click", wrongAnswered);
     falseAnswer2.addEventListener("click", changeColor);
+    falseAnswer2.addEventListener("click", sorry2);
     nextButton.addEventListener("click", slide3);
     //These will make the buttons clickable again
     trueAnswer.disabled = false;
     falseAnswer1.disabled = false;
     falseAnswer2.disabled = false;
+}
+
+function congrats2(){
+    let congratsMsg = document.getElementById("answer-heading");
+    congratsMsg.innerHTML = "Rrose Sélavy, exactly.";
+}
+
+function sorry2(){
+    let congratsMsg = document.getElementById("answer-heading");
+    congratsMsg.innerHTML = "Sorry, it was Rrose Sélavy.";
 }
 
 function slide3() {
@@ -165,7 +193,7 @@ function slide3() {
       <div id="options-area">
           <button class="option" id="false1">Why Not Sneeze, Rose Sélavy?</button>
           <button class="option" id="false2">In Advance of the Broken Arm</button>
-          <button class="option" id="true0">The Bicycle Wheel</button>
+          <button class="option" id="true0">Silent Echoes of the Absurd</button>
       </div>
 
       <!-- This should show the right answer after the user has selected an option -->
@@ -173,7 +201,7 @@ function slide3() {
         <p id="answer-heading">The Bicycle Wheel</p><br>
         <p>Marcel Duchamp's artistic humor knew no bounds. In 1921, he unveiled "Why Not Sneeze, Rose Sélavy?," a sculpture that encapsulated his whimsical approach. This piece featured a birdcage housing a cube of sugar cubes and a small thermometer, and the very title, "Why Not Sneeze, Rose Sélavy?," exemplified the delightful absurdity at the heart of his work. In 1964, Duchamp continued to tickle the art world's funny bone with "In Advance of the Broken Arm," a sculpture that turned a standard snow shovel into a work of art. The title playfully suggested that the shovel was ahead of its time, humorously commenting on the unconventional nature of art.</p>
       </div>
-      <button id="next">Finish</button>
+      <button id="next" style= "visibility:hidden">Finish</button>
       <div id="score-area">
         <p class="scores">Correct Answers: <span id="correct">${countTrue}</span></p>
         <p class="scores">Incorrect Answers: <span id="incorrect">${countFalse}</span></p>
@@ -184,22 +212,34 @@ function slide3() {
     let trueAnswer = document.getElementById("true0");
     let falseAnswer1 = document.getElementById("false1");
     let falseAnswer2 = document.getElementById("false2");
-    let solution = document.getElementById("solution-text");
     let finishButton = document.getElementById("next");
 
     //Event listeners for each answer
 
     trueAnswer.addEventListener("click", correctlyAnswered);
     trueAnswer.addEventListener("click", changeColor);
+    trueAnswer.addEventListener("click", congrats3);
     falseAnswer1.addEventListener("click", wrongAnswered);
     falseAnswer1.addEventListener("click", changeColor);
+    falseAnswer1.addEventListener("click", sorry3);
     falseAnswer2.addEventListener("click", wrongAnswered);
     falseAnswer2.addEventListener("click", changeColor);
+    falseAnswer2.addEventListener("click", sorry3);
     finishButton.addEventListener("click", slideResult);
     //These will make the buttons clickable again
     trueAnswer.disabled = false;
     falseAnswer1.disabled = false;
     falseAnswer2.disabled = false;
+}
+
+function congrats3(){
+    let congratsMsg = document.getElementById("answer-heading");
+    congratsMsg.innerHTML = "Well done. 'Silent Echoes of the Absurd' was not an actual title.";
+}
+
+function sorry3(){
+    let congratsMsg = document.getElementById("answer-heading");
+    congratsMsg.innerHTML = "Sorry, 'Silent Echoes of the Absurd' was not an actual title.";
 }
 
 function slideResult() {
@@ -210,6 +250,7 @@ function slideResult() {
   } else {
     badScore();
   }
+  console.log(userName + "'s score is: " + countTrue)
 }
 
 function perfectScore() {
