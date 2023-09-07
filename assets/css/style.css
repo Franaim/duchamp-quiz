@@ -32,16 +32,17 @@
 
 #introduction-area {
     display: flex;
-    width: 100%;
+    width: 90%;
     min-height: 80vh;
     height: max-content;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: larger;
     gap: 40px;
     margin-top: 10px;
     flex-direction: column;
     font-family: 'Literata', serif;
+    margin-top: 30px;
 }
 
 /* Specific style for username slide */
@@ -68,7 +69,7 @@ form {
 }
 
 #wheel-img {
-    width: inherit;
+    width: 110%;
 }
 
 .bold {
@@ -156,8 +157,8 @@ button {
 }
 .option {
     width: 100%;
-    align-self: center;
     text-align: left;
+    height: 60px;
 }
 
 #solution-text {
@@ -180,7 +181,7 @@ button {
 }
 
 .text-centered {
-    width: 95%;
+    width: 90%;
 }
 
 .feedback {
@@ -188,38 +189,68 @@ button {
 }
 
 /* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 50px;
+    }
 
-h1 {
-    font-size: 50px;
+    #heading {
+        margin-bottom: 0;
+    }
+    
+    #introduction-area {
+        min-height: 90vh;
+        justify-content: flex-start;
+        margin-top: 25px;
+    }
+    
+    .question-container {
+        height: 70vh;
+        width: 70%;
+        margin-top: 20px;
+    }
+    
+    .option {
+        height: 60px;
+        margin: 10px;
+    }
+    
+    #start-button,
+    #play-button,
+    #next,
+    #restart-button {
+        font-size: 16px;
+        padding: 8px 10px 8px 10px;
+    }
+    
+    .text-centered {
+        max-width: 80%;
+    }
+    
+    #score-area {
+        margin-bottom: 20px;
+        position: fixed;
+    }
 }
 
-#introduction-area {
-    min-height: 90vh;
-    justify-content: flex-start;
-    margin-top: 40px;
-}
+/* Media query: laptops and larger (992px and up) */
+@media screen and (min-width: 992px) {
 
-.question-container {
-    height: 70vh;
-    width: 70%;
-    margin-top: 20px;
-}
 
-.option {
-    height: 60px;
-    margin: 10px;
-}
+    #introduction-area {
+        gap: 70px;
+        margin-top: 100px;
+        max-height: 300px;
+    
+    }
 
-#start-button, #play-button, #next, #restart-button {
-    font-size: 16px;
-    padding: 8px 10px 8px 10px;
-}
+    .text-section {
+        max-width: 40%;
+        margin-top: 80px;
+    }
 
-.text-centered {
-    max-width: 80%;
-}
-
-#score-area {
-    margin-bottom: 20px;
-    position: fixed;
+    /* #introduction-area.prueba {
+        display: flex;
+        flex-direction: row;
+    }*/
 }

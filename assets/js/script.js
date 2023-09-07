@@ -261,11 +261,10 @@ function slideResult() {
 function perfectScore() {
     body.innerHTML = `
     <!-- For someone who answered all questions correctly: -->
-
     <h2 class="text-centered feedback">Congratulations, ${userName}!</h2>
     <p>Your score is ${countTrue}/3</p>
     <p class="text-centered">
-      You're a Duchamp disciple! You've cracked the enigmatic code of Marcel Duchamp's art. You're a true avant-garde champion!
+    You're a Duchamp disciple! You've cracked the enigmatic code of Marcel Duchamp's art. You're a true avant-garde champion!
     </p>
     <button onclick="window.location.reload()" id="restart-button">Play again</button>
     `;
@@ -274,11 +273,10 @@ function perfectScore() {
 function goodScore() {
     body.innerHTML = `
     <!-- For someone who answered one or two questions correctly: -->
-
     <h2 class="text-centered feedback">Not bad, ${userName}!</h2>
     <p>Your score is ${countTrue}/3</p>
     <p class="text-centered">
-      You've embraced Duchamp's spirit of experimentation. You made a few detours but found your way to some artistic revelations. Keep exploring!
+    You've embraced Duchamp's spirit of experimentation. You made a few detours but found your way to some artistic revelations. Keep exploring!
     </p>
     <button onclick="window.location.reload()" id="restart-button">Play again</button>
     `;
@@ -288,11 +286,10 @@ function goodScore() {
 function badScore() {
     body.innerHTML = `
     <!-- For someone who selected all the wrong answers: -->
-
     <h2 class="text-centered feedback">Oops, ${userName}!</h2>
     <p>Your score is ${countTrue}/3</p>
     <p class="text-centered">
-      Looks like you took a surrealist journey of your own. Don't worry; even Duchamp had his off days. Time for a brush-up on Duchampian wisdom!
+    Looks like you took a surrealist journey of your own. Don't worry; even Duchamp had his off days. Time for a brush-up on Duchampian wisdom!
     </p>
     <button onclick="window.location.reload()" id="restart-button">Play again</button>
     `;
