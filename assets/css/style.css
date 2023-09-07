@@ -8,29 +8,39 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Inter", sans-serif;
-
-}
-
-
 #quiz-container {
     background-color: #e9e3da;
     width: 100%;
-    height: 100vh;
+    height: max-content;
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-bottom: 0;
 }
 
-.heading {
+#heading {
     margin: 20px;
+    font-family: font-family: 'Abril Fatface', cursive;
+    text-align: center;
 }
 
 /* Style for game area in index */
 
 #introduction-area {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    gap: 40px;
+    margin-top: 20px;
+    flex-direction: column;
+    font-family: 'Literata', serif;
+
+}
+
+/* #introduction-area {
     display: flex;
     width: 70%;
     height: 800px;
@@ -40,15 +50,21 @@ body {
     gap: 40px;
     margin-top: 40px;
 
-}
+} */
 
 .text-section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 50%
-
+    width: 90%
 }
+
+/* .text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%
+} */
 
 #start-button, slide2-nextButton {
     background-color: black;
@@ -61,8 +77,12 @@ body {
 }
 
 #drawing {
-    height: 70%;
+    height: 55vh;
 }
+
+/* #drawing {
+    height: 70%;
+} */
 
 #game-area {
     background-color: white;
