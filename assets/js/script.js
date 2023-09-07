@@ -173,7 +173,7 @@ function slide3() {
         <p id="answer-heading">The Bicycle Wheel</p><br>
         <p>Marcel Duchamp's artistic humor knew no bounds. In 1921, he unveiled "Why Not Sneeze, Rose Sélavy?," a sculpture that encapsulated his whimsical approach. This piece featured a birdcage housing a cube of sugar cubes and a small thermometer, and the very title, "Why Not Sneeze, Rose Sélavy?," exemplified the delightful absurdity at the heart of his work. In 1964, Duchamp continued to tickle the art world's funny bone with "In Advance of the Broken Arm," a sculpture that turned a standard snow shovel into a work of art. The title playfully suggested that the shovel was ahead of its time, humorously commenting on the unconventional nature of art.</p>
       </div>
-      <button id="finish">Finish</button>
+      <button id="next">Finish</button>
       <div id="score-area">
         <p class="scores">Correct Answers: <span id="correct">${countTrue}</span></p>
         <p class="scores">Incorrect Answers: <span id="incorrect">${countFalse}</span></p>
@@ -185,7 +185,7 @@ function slide3() {
     let falseAnswer1 = document.getElementById("false1");
     let falseAnswer2 = document.getElementById("false2");
     let solution = document.getElementById("solution-text");
-    let finishButton = document.getElementById("finish");
+    let finishButton = document.getElementById("next");
 
     //Event listeners for each answer
 
@@ -256,11 +256,13 @@ function badScore() {
 //Counter functions
 function correctlyAnswered() {
   countTrue++;
+  console.log (userName + " selected the right answer")
   updateCounter();
 }
 
 function wrongAnswered() {
   countFalse++;
+  console.log (userName + " selected a wrong answer")
   updateCounter();
 }
 
