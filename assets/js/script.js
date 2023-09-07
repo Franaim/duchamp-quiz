@@ -262,23 +262,22 @@ function perfectScore() {
     body.innerHTML = `
     <!-- For someone who answered all questions correctly: -->
 
-    <h2>Congratulations, ${userName}!</h2>
+    <h2 class="text-centered feedback">Congratulations, ${userName}!</h2>
     <p>Your score is ${countTrue}/3</p>
-    <p>
+    <p class="text-centered">
       You're a Duchamp disciple! You've cracked the enigmatic code of Marcel Duchamp's art. You're a true avant-garde champion!
     </p>
     <button onclick="window.location.reload()">Play again</button>
     `;
-    let userName = document.getElementById("username");
 }
 
 function goodScore() {
     body.innerHTML = `
     <!-- For someone who answered one or two questions correctly: -->
 
-    <h2>Not bad, ${userName}!</h2>
+    <h2 class="text-centered feedback">Not bad, ${userName}!</h2>
     <p>Your score is ${countTrue}/3</p>
-    <p>
+    <p class="text-centered">
       You've embraced Duchamp's spirit of experimentation. You made a few detours but found your way to some artistic revelations. Keep exploring!
     </p>
     <button onclick="window.location.reload()">Play again</button>
@@ -290,7 +289,7 @@ function badScore() {
     body.innerHTML = `
     <!-- For someone who selected all the wrong answers: -->
 
-    <h2>Oops, ${userName}!</h2>
+    <h2 class="text-centered feedback">Oops, ${userName}!</h2>
     <p>Your score is ${countTrue}/3</p>
     <p>
       Looks like you took a surrealist journey of your own. Don't worry; even Duchamp had his off days. Time for a brush-up on Duchampian wisdom!

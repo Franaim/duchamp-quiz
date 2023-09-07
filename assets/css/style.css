@@ -33,7 +33,8 @@
 #introduction-area {
     display: flex;
     width: 100%;
-    height: fit-content;
+    min-height: 80vh;
+    height: max-content;
     align-items: center;
     justify-content: center;
     font-size: larger;
@@ -151,6 +152,7 @@ button {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 15px;
 }
 .option {
     width: 100%;
@@ -175,4 +177,12 @@ button {
     margin-top: 20px;
     margin-bottom: 10px;
     bottom: 0;
+}
+
+.text-centered {
+    width: 95%;
+}
+
+.feedback {
+    text-align: center;
 }
