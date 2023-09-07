@@ -125,20 +125,21 @@ button {
 } */
 
 #game-area {
-    background-color: white;
-    opacity: 90%;
     border-radius: 10px;
     width: 80%;
     padding: 20px;
 }
+
 /* Style for question section */
 
-#first-question-container {
+.question-container {
     display: flex;
     flex-direction: column;
     margin: 10px;
-    justify-content: center;
-    height: min-content;
+    justify-content: flex-start;
+    align-items: center;
+    height: max-content;
+    align-content: baseline;
 }
 
 #question-area {
@@ -147,10 +148,31 @@ button {
 
 #options-area {
     width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .option {
-    width: 95%;
+    width: 100%;
     align-self: center;
     text-align: left;
+}
 
+#solution-text {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+#next {
+    margin-top: 25px;
+}
+
+.scores {
+    font-size: 15px;
+}
+
+#score-area {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    bottom: 0;
 }

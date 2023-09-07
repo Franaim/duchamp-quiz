@@ -53,7 +53,7 @@ function slide0() {
 function slide1() {
     body.innerHTML =
     `
-    <div id="first-question-container">
+    <div class="question-container">
       <div id="question-area">
         <p id="question1">What nearly led Marcel Duchamp to give up his art career?</p>
       </div>
@@ -65,7 +65,7 @@ function slide1() {
 
       <!-- This should show the right answer after the user has selected an option -->
       <div id="solution-text" style="display:none">
-        <p id="answer-heading"></p><br>
+        <p id="answer-heading" class="bold"></p><br>
         <p>Duchamp had a deep passion for chess and even considered giving up art to become a professional chess player. He competed in several chess tournaments and achieved the title of "Master" in 1950. 
 One fun fact is his love for playing chess in unconventional places. Duchamp was known for carrying a pocket chess set with him wherever he went. He was so passionate about the game that he would challenge friends and even strangers to impromptu chess matches in cafes, art galleries, and even while riding on buses or trains.</p>
       </div>
@@ -116,9 +116,9 @@ function changeColor() {
     let falseAnswer2 = document.getElementById("false2");
     let solution = document.getElementById("solution-text");
     let nextButton = document.getElementById("next");
-    trueAnswer.style.backgroundColor = "green";
-    falseAnswer1.style.backgroundColor = "red";
-    falseAnswer2.style.backgroundColor = "red";
+    trueAnswer.style.backgroundColor = "#b4bc37";
+    falseAnswer1.style.backgroundColor = "#828d9c";
+    falseAnswer2.style.backgroundColor = "#828d9c";
     nextButton.style.visibility = "visible"; //this should make the Next Question button visible only after selecting an answer
     solution.style.display = "block"; //This will make the explanation visible only after selecting an answer
     
@@ -132,7 +132,7 @@ function changeColor() {
 function slide2() {
     body.innerHTML =
     `
-    <div id="second-question-container">
+    <div class="question-container">
       <div id="question-area">
         <p id="question2">What pseudonym did Marcel Duchamp use when writing art criticism?</p>
       </div>
@@ -144,7 +144,7 @@ function slide2() {
 
       <!-- This should show the right answer after the user has selected an option -->
       <div id="solution-text" style="display:none">
-        <p id="answer-heading"></p><br>
+        <p id="answer-heading" class="bold"></p><br>
         <p>One of his pseudonyms was "Rrose Sélavy" (pronounced "eros, c'est la vie"), a play on the phrase "Eros, c'est la vie" meaning "Love, that's life." Under this pseudonym, Duchamp authored several humorous and satirical articles about art, further blurring the lines between his art and his commentary on art.</p>
       </div>
       <button id="next" style= "visibility:hidden">Next</button>
@@ -191,7 +191,7 @@ function sorry2(){
 function slide3() {
     body.innerHTML =
     `
-    <div id="third-question-container">
+    <div class="question-container">
       <div id="question-area">
         <p id="question3">Among the following options, which title does not correspond to a genuine work created by Marcel Duchamp?</p>
       </div>
@@ -203,7 +203,7 @@ function slide3() {
 
       <!-- This should show the right answer after the user has selected an option -->
       <div id="solution-text" style="display:none">
-        <p id="answer-heading"></p><br>
+        <p id="answer-heading" class="bold"></p><br>
         <p>Marcel Duchamp's artistic humor knew no bounds. In 1921, he unveiled "Why Not Sneeze, Rose Sélavy?," a sculpture that encapsulated his whimsical approach. This piece featured a birdcage housing a cube of sugar cubes and a small thermometer, and the very title, "Why Not Sneeze, Rose Sélavy?," exemplified the delightful absurdity at the heart of his work. In 1964, Duchamp continued to tickle the art world's funny bone with "In Advance of the Broken Arm," a sculpture that turned a standard snow shovel into a work of art. The title playfully suggested that the shovel was ahead of its time, humorously commenting on the unconventional nature of art.</p>
       </div>
       <button id="next" style= "visibility:hidden">Finish</button>
