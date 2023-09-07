@@ -1,15 +1,13 @@
 //html elements
 let body = document.getElementById("introduction-area");
 let startButton = document.getElementById("start-button");
-const userName = document.getElementById("username");
+let userName = ""; //username as an empty string to be replaced by the user's input
 
 //Set the counter to 0
-
 let countTrue = 0;
 let countFalse = 0;
 
-//Event listeners
-
+//Event listener
 startButton.addEventListener("click", slide0);
 
 //Slide from introduction to username section
@@ -18,16 +16,28 @@ function slide0() {
     
     body.innerHTML =
     `
-    <label for="username">Choose a nickname:</label><br/>
-    <input type="text" id="username" name="username" placeholder="Enter nickname" required/>
-    <button id="play-button" name="play">Play</button>
+    <form>
+      <label for="username">Choose a nickname:</label><br/>
+      <input type="text" id="username" name="username" placeholder="Enter nickname" required maxlength="15"/>
+      <button id="play-button" type="submit" name="play">Play</button>
+    </form>
     `;
 
+    userName = document.getElementById("username");
     let playButton = document.getElementById("play-button");
 
-    //Event listeners for next slide function
+    //Event listeners for next slide function (once a nickname has been provided by the user)
 
-    playButton.addEventListener("click", slide1);
+    playButton.addEventListener("click", function(event) {
+        event.preventDefault ();
+        if  (userName.value === "") {  
+          alert ("Please enter a nickname")
+        } else {
+          userName = userName.value;  
+          slide1();
+        }  
+    }
+    );
 }
 
 //DOM functions
