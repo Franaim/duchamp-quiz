@@ -1,4 +1,4 @@
-![Duchamp's Dazzling Quiz logo](https://iili.io/J9MXxKx.png)
+![Duchamp's Dazzling Quiz logo](https://iili.io/J9MwAR2.png)
 
 # Project 2: Duchamp's Dazzling Quiz
 

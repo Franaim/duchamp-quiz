@@ -36,10 +36,10 @@ function slide0() {
     playButton.addEventListener("click", function(event) {
         event.preventDefault ();
         if  (userName.value === "") {  
-          alert ("Please enter a nickname")
+          alert ("Please enter a nickname");
         } else {
           userName = userName.value;
-          console.log("Nickname entered: " + userName)
+          console.log("Nickname entered: " + userName);
           slide1();
         }  
     }
@@ -258,7 +258,7 @@ function slideResult() {
   } else {
     badScore();
   }
-  console.log(userName + "'s score is: " + countTrue)
+  console.log(userName + "'s score is: " + countTrue);
 }
 
 function perfectScore() {
@@ -301,13 +301,13 @@ function badScore() {
 //Counter functions
 function correctlyAnswered() {
   countTrue++;
-  console.log(userName + " selected the right answer")
+  console.log(userName + " selected the right answer");
   updateCounter();
 }
 
 function wrongAnswered() {
   countFalse++;
-  console.log(userName + " selected a wrong answer")
+  console.log(userName + " selected a wrong answer");
   updateCounter();
 }
 
