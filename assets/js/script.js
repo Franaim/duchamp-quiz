@@ -267,8 +267,7 @@ function perfectScore() {
     <h2 class="text-centered feedback">Congratulations, ${userName}!</h2>
     <p>Your score is ${countTrue}/3</p>
     <p class="text-centered">
-    You're a Duchamp disciple! You've cracked the enigmatic code of Marcel Duchamp's art. You're a true avant-garde champion!
-    </p>
+    You're a Duchamp disciple! You've cracked the enigmatic code of Marcel Duchamp's art. You're a true avant-garde champion!</p>
     <button onclick="window.location.reload()" id="restart-button">Play again</button>
     `;
 }
