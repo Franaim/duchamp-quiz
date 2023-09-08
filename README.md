@@ -25,7 +25,7 @@ The user flows through the content in the following way:
 #### The Homepage
 
 - On this homepage, we will see for the first time the header, which will remain in the same place throughout the flow of the page. It is the name of the game with Abril Fatface typography in black.
-- Immediately below, we see an illustration by me, Francisco Menardi. It is a pencil portrait of Marcel Duchamp.
+- Immediately below, we see an illustration. It is a pencil portrait of Marcel Duchamp.
 - Below the image, you will see a brief introduction to the game and its contents.
 - Finally a button with the message "Start the game" which when clicked will activate the slide0 function. This function will generate a partial replacement of the html, giving rise to a new section.
 
@@ -84,7 +84,11 @@ The user flows through the content in the following way:
 
 ### Bugs
 
-- No bugs have been discovered in the deployment of this project.
+Two bugs were detected in the process:
+
+- Taking the variable userName: First of all the userName variable could not be taken for later use. The way to fix this error was to wrap the text input element and the play button inside a form and give the button the submit type. Then, it was necessary to avoid the default action of the submit event and, once the userName variable was defined in the global scope, give as content the value of the input submitted by the user.
+
+- The changeColor function was only partially activated. This was due to an id selector in the function that was not matched in the html. After manual testing the error was detected and corrected.
 
 ### Unfixed bugs
 
@@ -96,17 +100,7 @@ The user flows through the content in the following way:
 - CSS: No errors have been detected when passing the code through the official Jigsaw validator.
 - Accessibility: The colours, fonts and contrasts make the website easy to read and accessible. When testing with the Chrome devtools Lighthouse, the results were as follows:
 
-1. Home / Index page:
-   ![Screenshot of Chrome devtools lighthouse report (index)](https://iili.io/HD9dXwu.jpg)
-
-2. About Us page:
-   ![Screenshot of Chrome devtools lighthouse report (about us)](https://iili.io/HD9dhZb.jpg)
-
-3. Artwork page:
-   ![Screenshot of Chrome devtools lighthouse report (artwork)](https://iili.io/HD9dV99.jpg)
-
-4. Form / Collaborate page:
-   ![Screenshot of Chrome devtools lighthouse report (form)](https://iili.io/HD9dWue.jpg)
+![Screenshot of Chrome devtools lighthouse report](https://iili.io/J9hFpYN.jpg)
 
 ## Deployment
 
@@ -117,18 +111,13 @@ The user flows through the content in the following way:
 2. From the Source section drop-down menu, select the Main Branch
 
 3. Once the main branch has been selected, the page provides the link to the completed website.
-   The live link can be found here: [WAY IA IA](https://franaim.github.io/way-ia-ia/)
+   The live link can be found here: [Duchamp's Dazzling Quiz](https://franaim.github.io/duchamp-quiz/)
 
 ## Credits
 
-### Content
-
-- The code for the nav toggle on the navigation menu was taken from the CI [Love Running Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LRFX101+2023_Q2/courseware/e805068059af42af87681032aa64053f/7525117e5cd144daa2a7b0c57843bbee/).
-
 ### Media
 
-- The icons for Instagram, Twitter, and YouTube were taken from [Fontawesome](https://fontawesome.com/)
 - Most of the text was originally generated with [ChatGPT](https://chat.openai.com/)
-- All the images were created using [Dall-E](https://openai.com/research/dall-e)
+- The illustration on homepage was made by me, Francisco Menardi.
+- The image of Bicycle wheel is a photograph taken from google. No restriction on the use of the image was found.
 - The fonts were imported from [Google Fonts](https://fonts.google.com/)
-- The video was made by the [MoMa](https://www.moma.org/) and taken from [YouTube](https://www.youtube.com/)
