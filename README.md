@@ -33,7 +33,7 @@ The user flows through the content in the following way:
 
 #### The Nickname Section
 
-- En esta sección podremos ver debajo del header nada más que un input element de texto con un label invitándonos a introducir nuestro propio nickname y un botón submit con el mensaje de "Play".
+- In this section we can see below the header nothing more than a text input element with a label inviting us to enter our own nickname and a submit button with the message "Play".
 
 ![Screenshot of Duchamp's Dazzling Quiz website's nickname section with alert](https://iili.io/J9XBWss.jpg)
 
@@ -52,7 +52,7 @@ The user flows through the content in the following way:
 
 ![Screenshot of Duchamp's Dazzling Quiz website's quiz section after selecting an answer](https://iili.io/J9XBe72.jpg)
 
-- Al hacer click en cualquiera de las opciones, los botones conteniéndolas se inhabilitaran y cambiaran de color indicando qué respuesta era la correcta y cuáles las incorrectas. Todo esto constituye la función changeColor. Also within this function, the Next button to go to the next question will become visible and the display of a short text with an explanation of the correct answer, previously without display, will switch.
+- By clicking on any of the options, the buttons containing them will be disabled and will change colour indicating which answer was correct and which were incorrect. This is the changeColor function. Also within this function, the Next button to go to the next question will become visible and the display of a short text with an explanation of the correct answer, previously without display, will switch.
 - On the other hand, depending on whether the option we have chosen is correct or incorrect, two more functions will be activated: on the one hand, the "sorry" and "congrats" functions will display a different message on the screen. On the other hand, the functions "correctlyAnswered" and "wrongAnswered" will add points of one to either the correct or wrong answer counter accordingly.
 
 ![Screenshot of Duchamp's Dazzling Quiz website's counter](https://iili.io/J9XBOdl.jpg)
