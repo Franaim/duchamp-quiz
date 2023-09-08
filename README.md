@@ -1,74 +1,86 @@
-![Duchamp's Dazzling Quiz logo](https://iili.io/J9MwAR2.png)
+![Duchamp's Dazzling Quiz logo](https://iili.io/J9X3hhb.png)
 
 # Project 2: Duchamp's Dazzling Quiz
 
-The **Duchamp's Dazzling Quiz** website is a test prototype for a quiz game. The user can choose from three options the correct answer to a question. He/she will see the correct result, whether he/she got it right or wrong, and then he/she will have the possibility to continue to the next question.
+The **Duchamp's Dazzling Quiz** website is a test prototype for a quiz game. The user can enter a nickname and choose from three options the correct answer to each question. After selecting an option they will see the correct result, whether they got it right or wrong, and then they will have the possibility to continue to the next question.
 Although the game is short, the prototype has the structure to be able to incorporate new questions very easily and thus extend the game, adding challenges and interest to the page.
 
-![Illustrative image of the website's responsiveness](https://iili.io/Hty1QDX.jpg)
+![Illustrative image of the website's responsiveness](https://iili.io/J9XC04j.jpg)
 
 ## Features
 
 ### Navigation
 
-On this website you will find sections with the information that a user would surely look for on the website of a digital art gallery, for example:
+This web page has a single page, the index.html, part of which will be progressively replaced by JavaScript functions triggered by the user's interaction with the site. In this way, new sections within the html will be reachable without the need for new pages, neither local nor external.
+The user flows through the content in the following way:
 
-- A landing page or homepage with an image of great prominence and from which you could go with a click both to the social networks of the gallery in a new tab and to the different sections of the page.
-- A form to collaborate in artistic projects.
-- A section with information about the gallery as an institution (mission or statement).
-- An image and video gallery where you could learn about the curatorial processes of the works and from where you could go to the websites of the different artists or even open the images in large size in a new tab.
+- First we will find a landing page or home page with an introduction to the game.
+- From there we can start the game and move on to the section where we must enter a nickname.
+- Once we have done so, we can start the game. The game consists of three questions, one at a time, and to move from one to the next, we must first choose one of the three options offered.
+- Finally, when answering the last question, we will have the option to finish the game, which will take us to a new section, according to the result.
+- In this last section we will have feedback according to our score and the option to restart the game.
 
-![Screenshot of WAY AI AI website's header](https://iili.io/HtyejUX.jpg)
+![Screenshot of Duchamp's Dazzling Quiz website's homepage](https://iili.io/J9XxYQt.jpg)
 
-#### The Header
+#### The Homepage
 
-- The header shows the name of the gallery centred at the top of the page, in large size, Josefin Sans font and black on a white background.
-- The header includes a navigation menu that indicates with an underline the page you are on. From there we can move between the Home, About us and Artwork pages.
-- The header is present in all the pages and in the version for mobile screens, it has a fixed position, being visible no matter how much you scroll the screen.
+- On this homepage, we will see for the first time the header, which will remain in the same place throughout the flow of the page. It is the name of the game with Abril Fatface typography in black.
+- Immediately below, we see an illustration by me, Francisco Menardi. It is a pencil portrait of Marcel Duchamp.
+- Below the image, you will see a brief introduction to the game and its contents.
+- Finally a button with the message "Start the game" which when clicked will activate the slide0 function. This function will generate a partial replacement of the html, giving rise to a new section.
 
-![Screenshot of WAY AI AI website's footer](https://iili.io/HtyeMVp.jpg)
+![Screenshot of Duchamp's Dazzling Quiz website's nickname section](https://iili.io/J9XBj1f.jpg)
 
-#### The Footer
+#### The Nickname Section
 
-- The footer, like the Header, is present on all pages.
-- On a brownish-grey base, in tune with the background colour of the website, it shows on the left in a slightly darker tone the icons of Instagram, Twitter and Youtube. Clicking on each of them will take you to each of these pages respectively. To the right in the footer we can see in the same dark grey the copyright message.
+- En esta sección podremos ver debajo del header nada más que un input element de texto con un label invitándonos a introducir nuestro propio nickname y un botón submit con el mensaje de "Play".
 
-![Screenshot of WAY AI AI website's Home page](https://iili.io/HtyeNJn.jpg)
+![Screenshot of Duchamp's Dazzling Quiz website's nickname section with alert](https://iili.io/J9XBWss.jpg)
 
-#### The Homepage / Index
+- Since the nickname is a required field, attempting to enter the game without entering a nickname will result in an alert message.
 
-- With a strong focus on the background image on this page, the homepage offers two floating, translucent messages in boxes. On the left, a small welcome message on a white background; on the right, a small black box with an invitation to artists to go to another page and fill in a form to collaborate with the project.
+![Screenshot of the background image on Duchamp's Dazzling Quiz website's nickname section](https://iili.io/J9XBwg4.jpg)
 
-![Screenshot of WAY AI AI website's About Us page](https://iili.io/HtyeXfI.jpg)
+- In addition to that, in this section there is a background image that can be viewed in full by scrolling down. It is a picture of Marcel Duchamp's famous ready-made "Bicycle wheel".
 
-#### The About Us page
+![Screenshot of Duchamp's Dazzling Quiz website's quiz section](https://iili.io/J9XBhqG.jpg)
 
-- This page consists mainly of superimposed text and image. The text on the left is wrapped in a translucent box, allowing one to appreciate the large-scale illustrative image that is positioned on the right margin of the screen.
-- The text explains what the WAY AI AI project is about and states its position on the subject in question, i.e. artificial intelligence in art history and as a part of contemporary art itself.
+#### The Quiz Section
 
-![Screenshot of WAY AI AI website's Artwork page](https://iili.io/Htyehlt.jpg)
+- Once in the quiz section, we will see a very clear and straightforward view of the game. The interaction is quite intuitive. One question and three buttons (which on the computer have a hover effect) with one option on each.
+- Underneath, a counter which, set to 0 at the start, indicates correct and incorrect answers.
 
-#### The Artwork page
+![Screenshot of Duchamp's Dazzling Quiz website's quiz section after selecting an answer](https://iili.io/J9XBe72.jpg)
 
-- This page features a layout of separate boxes, distributed evenly across the screen space and in order. In this case, as inside these boxes (similar in appearance to polaroid photos) are images of different colours, the background is kept in an eye-friendly colour, in tune with the overall design of the page.
-- The first page presents the section with a title and a text about the curatorial process behind the artworks selected and displayed on the page.
-- Each box has an image of a work of art from which you can click to a new tab where you can see it in large size and quality. Below this, we can see the name of the artist, the title of the piece and a hover-sensitive button to go to the artists' websites.
-- Finally, the last box on this page is designed to contain an embedded video from Youtube. It does not play automatically when the page loads. The Youtube controls are available, and you can also watch it on the full screen. In this case, by clicking on the button in the box, we can open the video directly in its source.
+- Al hacer click en cualquiera de las opciones, los botones conteniéndolas se inhabilitaran y cambiaran de color indicando qué respuesta era la correcta y cuáles las incorrectas. Todo esto constituye la función changeColor. Also within this function, the Next button to go to the next question will become visible and the display of a short text with an explanation of the correct answer, previously without display, will switch.
+- On the other hand, depending on whether the option we have chosen is correct or incorrect, two more functions will be activated: on the one hand, the "sorry" and "congrats" functions will display a different message on the screen. On the other hand, the functions "correctlyAnswered" and "wrongAnswered" will add points of one to either the correct or wrong answer counter accordingly.
 
-![Screenshot of WAY AI AI website's Form page](https://iili.io/HtyeViN.jpg)
+![Screenshot of Duchamp's Dazzling Quiz website's counter](https://iili.io/J9XBOdl.jpg)
 
-#### The Form / Collaborate page
+- Within these functions is the "updateCounter" function, whereby the counter on the screen will be updated to show the new result, as can be seen in the image above.
 
-- This page can only be reached from the homepage or index.
-- With a sober design, we see a white form centred, leaving the background colour of the page visible. The contrast will be concentrated on the title of the page and the Upload portfolio and Submit buttons on the form.
-- From here, we will be able to enter some personal data to collaborate with the gallery: name, e-mail address, age and a message. In addition, to send the form, the applicant artist will have to upload their portfolio.
+#### Feedback and Score
+
+- Now, when answering the last question, instead of the Next button we will have a Finish button. This will activate the slideResult function, which consists of an if statement and three functions depending on the case:
+
+![Screenshot of Duchamp's Dazzling Quiz website's "Perfect Score" feedback section](https://iili.io/J9XBkeS.jpg)
+
+- If we have got all the questions right, the perfectScore function will give us congratulatory feedback: the nickname we entered at the beginning of the game and our final score.
+
+![Screenshot of Duchamp's Dazzling Quiz website's "Not Bad Score" feedback section](https://iili.io/J9XBvm7.jpg)
+
+- In the same way, if we have got 1 or 2 answers out of 3 right, the goodScore function will give us another message, and as in the previous case, we will see a message including our nickname and our final score.
+- Finally, in case we have failed all the questions, the badScore function will be activated, displaying a specific message on the screen, again, of course, including the final score and our nickname. See image below:
+
+![Screenshot of Duchamp's Dazzling Quiz website's "Oops Score" feedback section](https://iili.io/J9XBSI9.jpg)
+
+- As a final comment on the navigation, note that regardless of our result, in all versions of the feedback section we will have a button with the message "Play again" which will reload the page and take us back to the index and give us the possibility to enter a new nickname and get a new score.
 
 ## Testing
 
 - I tested that this page works in different browsers: Chrome, Safari, Tor and Firefox.
 - Applying Chrome's devtools, I verified that the design of the project was responsive and retained its functionality and good appearance on different devices (smartphones, tablets, laptops, desktops and large monitors).
 - I confirmed that all content on the site is easy to see, understand and read.
-- I ensured that the form works, with each field responding to the corresponding content and requiring the user to complete the entire form before submitting it.
 
 ### Bugs
 
