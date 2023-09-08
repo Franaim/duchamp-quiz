@@ -76,31 +76,12 @@ form {
     font-weight: 500;
 }
 
-/* #introduction-area {
-    display: flex;
-    width: 70%;
-    height: 800px;
-    align-items: center;
-    justify-content: center;
-    font-size: larger;
-    gap: 40px;
-    margin-top: 40px;
-
-} */
-
 .text-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%
 }
-
-/* .text-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 50%
-} */
 
 button {
     background-color: black;
@@ -124,10 +105,6 @@ button:hover {
 #drawing {
     height: 55vh;
 }
-
-/* #drawing {
-    height: 70%;
-} */
 
 #game-area {
     border-radius: 10px;

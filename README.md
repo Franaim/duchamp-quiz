@@ -98,6 +98,7 @@ Two bugs were detected in the process:
 
 - HTML: No errors were detected when passing the code through the official W3C validator.
 - CSS: No errors have been detected when passing the code through the official Jigsaw validator.
+- JavaScript: No errors have been detected when passing the code through Jshint linter, nor when checking the flow through the website on DevTools console or when calling functions manually. A series of messages logged in the console according to the user interaction with the website ensures all it functions work properly.
 - Accessibility: The colours, fonts and contrasts make the website easy to read and accessible. When testing with the Chrome devtools Lighthouse, the results were as follows:
 
 ![Screenshot of Chrome devtools lighthouse report](https://iili.io/J9hFpYN.jpg)
