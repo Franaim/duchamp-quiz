@@ -120,5 +120,5 @@ Two bugs were detected in the process:
 
 - Most of the text was originally generated with [ChatGPT](https://chat.openai.com/)
 - The illustration on homepage was made by me, Francisco Menardi.
-- The image of Bicycle wheel is a photograph taken from google. No restriction on the use of the image was found.
+- The image of Bicycle wheel is a photograph taken from Google. No restriction on the use of the image was found.
 - The fonts were imported from [Google Fonts](https://fonts.google.com/)
